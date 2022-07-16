@@ -4,7 +4,11 @@ import re
 
 print("!WEL COME TO SIGN UP! ")
 file=os.path.exists("signup.json")
-
+if file==False:
+    l=[]
+    with open("signup.json","a")as f:
+        a=json.dump(l,f,indent=4)
+#         print(a)
 user=input("what you want to login or signup:-")
 if user=="signup":
         name=input("enter the firstNAME:-")
